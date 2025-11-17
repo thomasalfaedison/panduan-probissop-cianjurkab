@@ -1,0 +1,116 @@
+\documentclass[12pt]{article}
+\usepackage[a4paper, top=2.5cm, bottom=2.5cm, left=3cm, right=3cm]{geometry}
+\usepackage{amsmath, amssymb}
+\usepackage{array}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{fontspec}
+\usepackage{setspace}
+\usepackage{parskip}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage[hidelinks]{hyperref}
+
+\usepackage{indentfirst}
+\usepackage{lastpage}
+\usepackage{ragged2e}
+\usepackage{float}
+
+\usepackage[figurename=Gambar]{caption}
+\usepackage{textcase}
+\usepackage{hhline}
+\usepackage{colortbl}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{tabularx}
+\usepackage{seqsplit}
+\usepackage{url}
+\usepackage{xcolor}
+\usepackage{fancyvrb}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[table]{xcolor}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{lipsum}
+
+% format section
+\titleformat{\section} % command
+  {\fontsize{14pt}{14pt}\selectfont\bfseries\raggedright} % format
+  {\thesection} % label
+  {0pt} % sep
+  {} % before-code
+
+% format subsection
+\titleformat{\subsection} % command
+  {\fontsize{12pt}{12pt}\selectfont\bfseries} % format
+  {\thesubsection} % label
+  {0pt} % sep
+  {} % before-code
+
+% format subsubsection
+\titleformat{\subsubsection} % command
+  {\fontsize{12pt}{12pt}\selectfont\bfseries} % format
+  {\thesubsubsection} % label
+  {0pt} % sep
+  {} % before-code
+
+
+  \def\unitkerja{}
+
+
+\setmainfont{Times New Roman}
+\doublespacing
+
+\begin{document}
+
+
+\ifdefined\unitkerja
+  \input{000-sampul-unit.tex}
+\fi
+
+\pagenumbering{roman}
+\setcounter{page}{1}
+
+\input{004-daftar-isi.tex}
+
+\newpage
+
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+% ======panduan Unit Kerja=========
+
+\ifdefined\unitkerja
+\input{201-halaman-login-unit.tex}
+
+\newpage
+
+\input{208-halaman-dashboard-sop-unit.tex}
+
+\newpage
+
+\input{209-halaman-sop-unit-unit.tex}
+
+\newpage
+
+\input{210-halaman-sop-umum-unit.tex}
+
+\input{211-halaman-konsep-unit.tex}
+
+\input{212-halaman-periksa-unit.tex}
+
+\input{214-halaman-perbaikan-unit.tex}
+
+\input{215-halaman-setuju-unit.tex}
+
+\input{216-halaman-aktif-unit.tex}
+
+\input{216-halaman-arsip-unit.tex}
+
+\fi
+
+\label{LastPage}
+
+\end{document}
